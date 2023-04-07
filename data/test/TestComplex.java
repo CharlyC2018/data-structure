@@ -106,7 +106,7 @@ public class TestComplex {
 		z2.add(a, b);
 		z2.paint("z2");
 
-		// z2.init(0, 0);
+		//z2.init(0, 0);
 		// z2.init(1, 0);
 		// z2.init(0, 1);
 
