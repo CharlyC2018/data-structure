@@ -31,8 +31,8 @@ public class TestComplex {
 	}
 
 	public void init(double realPart, double imagPart) {
-		this.realPart = realPart;
-		this.imagPart = imagPart;
+		this.setRealPart(realPart);
+		this.setImagPart(imagPart);
 	}
 
 	// 复数加法
@@ -107,8 +107,8 @@ public class TestComplex {
 		z2.paint("z2");
 
 		//z2.init(0, 0);
-		// z2.init(1, 0);
-		// z2.init(0, 1);
+		//z2.init(1, 0);
+		//z2.init(0, 1);
 
 		// z3计算(8+6i)*(4+3i) / ((8+6i)+(4+3i))
 		z3.devision(z1, z2);
