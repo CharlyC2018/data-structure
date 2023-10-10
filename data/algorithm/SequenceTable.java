@@ -1,13 +1,13 @@
-package test;
+package algorithm;
 
-public class TestSequenceTable<T> {
+public class SequenceTable<T> {
 	public static final int MAXSIZE = 10;
 
 	Object[] data;
 
 	int length;
 
-	public TestSequenceTable() {
+	public SequenceTable() {
 	}
 
 	public void initList() {

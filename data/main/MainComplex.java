@@ -1,17 +1,17 @@
-package testMain;
+package main;
 
-import test.TestComplex;
+import algorithm.Complex;
 
-public class TestComplexMain {
+public class MainComplex {
 	// º∆À„(8+6i)*(4+3i) / ((8+6i)+(4+3i))
 	public static void main(String[] args) {
 
-		TestComplex a = new TestComplex(8, 6);
-		TestComplex b = new TestComplex(4, 3);
+		Complex a = new Complex(8, 6);
+		Complex b = new Complex(4, 3);
 
-		TestComplex z1 = new TestComplex();
-		TestComplex z2 = new TestComplex();
-		TestComplex z3 = new TestComplex();
+		Complex z1 = new Complex();
+		Complex z2 = new Complex();
+		Complex z3 = new Complex();
 
 		// z1º∆À„(8+6i)*(4+3i)
 		z1.multiply(a, b);

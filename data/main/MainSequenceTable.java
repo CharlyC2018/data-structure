@@ -1,10 +1,10 @@
-package testMain;
+package main;
 
-import test.TestSequenceTable;
+import algorithm.SequenceTable;
 
-public class TestSequenceTableMain {
+public class MainSequenceTable {
 	public static void main(String[] args) {
-		TestSequenceTable<Integer> test1 = new TestSequenceTable<>();
+		SequenceTable<Integer> test1 = new SequenceTable<>();
 		test1.initList();
 		
 		int a= 1;

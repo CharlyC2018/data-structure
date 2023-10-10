@@ -1,58 +1,77 @@
 package test;
 
-public class TestBinarySearch {
+import static org.junit.jupiter.api.Assertions.*;
 
-	/**
-	 * 二分查找基础版
-	 * 
-	 * @param: array  -待查找的升序数组
-	 * @param: target -待查找的目标值
-	 * @return: 找到返回索引，找不到返回-1
-	 * 
-	 */
-	public int binarySearchBasic(int[] array, int target) {
-		int i = 0, j = array.length - 1;// 设置指针和初值
+import org.junit.jupiter.api.*;
 
-		while (i <= j) {
-			// 要使用无符号右移运算，不能使用/2，会导致结果溢出，Java整数相除会自动向下取整
-			int m = (i + j) >>> 1;
+import algorithm.BinarySearch;
 
-			if (target < array[m])/* 目标在左边 */ {
-				j = m - 1;
-			} else if (array[m] < target)/* 目标在右边 */ {
-				i = m + 1;
-			} else {
-				return m;
-			}
-		}
+class TestBinarySearch {
+	BinarySearch test = new BinarySearch();
 
-		return -1;
+	@Test
+	@DisplayName("测试Basic,找到")
+	public void test1() {
+		int[] a = { 7, 8, 9, 10, 12, 20, 30, 40, 50, 80, 100 };
+		assertEquals(0, test.binarySearchBasic(a, 7));
+		assertEquals(1, test.binarySearchBasic(a, 8));
+		assertEquals(2, test.binarySearchBasic(a, 9));
+		assertEquals(3, test.binarySearchBasic(a, 10));
+		assertEquals(4, test.binarySearchBasic(a, 12));
+		assertEquals(5, test.binarySearchBasic(a, 20));
+		assertEquals(6, test.binarySearchBasic(a, 30));
+		assertEquals(7, test.binarySearchBasic(a, 40));
+		assertEquals(8, test.binarySearchBasic(a, 50));
+		assertEquals(9, test.binarySearchBasic(a, 80));
+		assertEquals(10, test.binarySearchBasic(a, 100));
 	}
 
-	/*
-	 * 问题1
-	 * 
-	 * 问题3：都写成小于号有什么好处 比较的变量和升序数组的顺序一样
-	 * 
-	 * 
-	 */
+	@Test
+	@DisplayName("测试Basic,没找到")
+	public void test2() {
+		int[] a = { 7, 8, 9, 10, 12, 20, 30, 40, 50, 80, 100 };
+		assertEquals(-1, test.binarySearchBasic(a, 6));
+		assertEquals(-1, test.binarySearchBasic(a, 15));
+		assertEquals(-1, test.binarySearchBasic(a, 105));
+	}
 
-	public int binarySearchAlternative(int[] array, int target) {
-		int i = 0, j = array.length;
+	@Test
+	@DisplayName("测试Alternative,找到")
+	public void test3() {
+		int[] a = { 7, 8, 9, 10, 12, 20, 30, 40, 50, 80, 100 };
+		assertEquals(0, test.binarySearchAlternative(a, 7));
+		assertEquals(1, test.binarySearchAlternative(a, 8));
+		assertEquals(2, test.binarySearchAlternative(a, 9));
+		assertEquals(3, test.binarySearchAlternative(a, 10));
+		assertEquals(4, test.binarySearchAlternative(a, 12));
+		assertEquals(5, test.binarySearchAlternative(a, 20));
+		assertEquals(6, test.binarySearchAlternative(a, 30));
+		assertEquals(7, test.binarySearchAlternative(a, 40));
+		assertEquals(8, test.binarySearchAlternative(a, 50));
+		assertEquals(9, test.binarySearchAlternative(a, 80));
+		assertEquals(10, test.binarySearchAlternative(a, 100));
+	}
 
-		while (i < j) {
+	@Test
+	@DisplayName("测试Alternative,没找到")
+	public void test4() {
+		int[] a = { 7, 8, 9, 10, 12, 20, 30, 40, 50, 80, 100 };
+		assertEquals(-1, test.binarySearchAlternative(a, 6));
+		assertEquals(-1, test.binarySearchAlternative(a, 15));
+		assertEquals(-1, test.binarySearchAlternative(a, 105));
+	}
+	
+	public static void main(String[] args) {
+		int i = 0;
+		int j = Integer.MAX_VALUE - 1;
+		int m = (i + j) / 2;
+		System.out.println(m);
 
-			int m = (i + j) >>> 1;
-
-			if (target < array[m])/* 目标在左边 */ {
-				j = m;
-			} else if (array[m] < target)/* 目标在右边 */ {
-				i = m + 1;
-			} else {
-				return m;
-			}
-		}
-
-		return -1;
+		i = m + 1;
+		m = (i + j) >>> 1;
+		System.out.println(m);
+		
+		System.out.println(Integer.toString(15487,2));
+		System.out.println(Integer.toBinaryString(15487));
 	}
 }

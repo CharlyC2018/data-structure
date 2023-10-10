@@ -1,12 +1,13 @@
-package testMain;
+package main;
 
 import java.util.Arrays;
-import test.TestBubbleSort;
 
-public class TestBubbleSortMain {
+import algorithm.BubbleSort;
+
+public class MainBubbleSort {
 
 	public static void main(String[] args) {
-		TestBubbleSort test = new TestBubbleSort();
+		BubbleSort test = new BubbleSort();
 
 		int[] value = { 3, 1, 6, 8, 9, 0, 7, 4, 5, 2 };
 		System.out.println("0лкеепР:" + Arrays.toString(value));

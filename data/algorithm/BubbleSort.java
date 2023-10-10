@@ -1,8 +1,8 @@
-package test;
+package algorithm;
 
 import java.util.Arrays;
 
-public class TestBubbleSort {
+public class BubbleSort {
 
 	// ц╟ещеепР
 	public void bubbleSort(int[] values) {

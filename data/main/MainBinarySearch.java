@@ -1,12 +1,13 @@
-package testMain;
+package main;
 
 import java.util.Arrays;
-import test.TestBinarySearch;
 
-public class TestBinarySearchMain {
+import algorithm.BinarySearch;
+
+public class MainBinarySearch {
 
 	public static void main(String[] args) {
-		TestBinarySearch test = new TestBinarySearch();
+		BinarySearch test = new BinarySearch();
 
 		int[] arr = { 30, 20, 50, 10, 80, 9, 7, 12, 100, 40, 8 };
 		int searchNumber = 30;

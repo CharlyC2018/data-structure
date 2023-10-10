@@ -1,6 +1,6 @@
-package test;
+package algorithm;
 
-public class TestComplex {
+public class Complex {
 	private double realPart;
 	private double imagPart;
 	
@@ -20,12 +20,12 @@ public class TestComplex {
 		this.imagPart = imagPart;
 	}
 
-	public TestComplex() {
+	public Complex() {
 		realPart = 0;
 		imagPart = 0;
 	}
 
-	public TestComplex(double realPart, double imagPart) {
+	public Complex(double realPart, double imagPart) {
 		this.realPart = realPart;
 		this.imagPart = imagPart;
 	}
@@ -36,7 +36,7 @@ public class TestComplex {
 	}
 
 	// 复数加法
-	public TestComplex add(TestComplex x, TestComplex y) {
+	public Complex add(Complex x, Complex y) {
 
 		double a = x.getRealPart();
 		double b = x.getImagPart();
@@ -50,7 +50,7 @@ public class TestComplex {
 	}
 
 	// 复数乘法
-	public TestComplex multiply(TestComplex x, TestComplex y) {
+	public Complex multiply(Complex x, Complex y) {
 
 		double a = x.getRealPart();
 		double b = x.getImagPart();
@@ -64,7 +64,7 @@ public class TestComplex {
 	}
 
 	// 复数除法
-	public TestComplex devision(TestComplex x, TestComplex y) {
+	public Complex devision(Complex x, Complex y) {
 
 		/* 实部和虚部全为零才没有意义 */
 		if (y.getRealPart() == 0 && y.getImagPart() == 0) {
