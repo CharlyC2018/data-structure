@@ -1,6 +1,6 @@
 package algorithm;
 
-public class BinarySearch {
+public class binarySearch {
 
 	/**
 	 * 二分查找基础版

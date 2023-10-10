@@ -2,12 +2,12 @@ package main;
 
 import java.util.Arrays;
 
-import algorithm.BinarySearch;
+import algorithm.binarySearch;
 
-public class MainBinarySearch {
+public class mainBinarySearch {
 
 	public static void main(String[] args) {
-		BinarySearch test = new BinarySearch();
+		binarySearch test = new binarySearch();
 
 		int[] arr = { 30, 20, 50, 10, 80, 9, 7, 12, 100, 40, 8 };
 		int searchNumber = 30;

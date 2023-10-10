@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
-import algorithm.BinarySearch;
+import algorithm.binarySearch;
 
-class TestBinarySearch {
-	BinarySearch test = new BinarySearch();
+class testBinarySearch {
+	binarySearch test = new binarySearch();
 
 	@Test
 	@DisplayName("≤‚ ‘Basic,’“µΩ")

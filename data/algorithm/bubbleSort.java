@@ -2,7 +2,7 @@ package algorithm;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class bubbleSort {
 
 	// ц╟ещеепР
 	public void bubbleSort(int[] values) {

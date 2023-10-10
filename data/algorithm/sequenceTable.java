@@ -1,13 +1,13 @@
 package algorithm;
 
-public class SequenceTable<T> {
+public class sequenceTable<T> {
 	public static final int MAXSIZE = 10;
 
 	Object[] data;
 
 	int length;
 
-	public SequenceTable() {
+	public sequenceTable() {
 	}
 
 	public void initList() {
